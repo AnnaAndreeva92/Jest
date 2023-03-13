@@ -4,29 +4,24 @@ describe("Books names test suit", () => {
   it("Books names should be sorted in ascending order", () => {
     const input = [
       "Гарри Поттер",
-        "Властелин Колец",
-        "Волшебник изумрудного города"
-    ]
-      
+      "Властелин Колец",
+      "Волшебник изумрудного города",
+    ];
+
     const expected = [
       "Властелин Колец",
       "Волшебник изумрудного города",
       "Гарри Поттер",
-    ]
-    const result = sorting.sortByName(input)
+    ];
+    const result = sorting.sortByName(input);
 
     expect(result).toEqual(expected);
   });
 });
 
-it("Books names should be sorted in ascending order", () => {
-  expect(
-    sorting.sortByName([
-      "Властелин Колец",
-      "Властелин Колец"
-    ])
-  ).toEqual([
+it("Book titles should be unsorted", () => {
+  expect(sorting.sortByName(["Властелин Колец", "Властелин Колец"])).toEqual([
     "Властелин Колец",
-    "Властелин Колец"
+    "Властелин Колец",
   ]);
 });
